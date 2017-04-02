@@ -1,0 +1,25 @@
+apply plugin: 'java'
+group 'ru.r5am'
+version '1.0.0'
+
+apply plugin: 'java'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.eclipse.jetty:jetty-server:+'
+    compile 'org.eclipse.jetty:jetty-servlet:+'
+    compile 'org.eclipse.jetty:jetty-webapp:+'
+    compile 'org.freemarker:freemarker:+'
+    testCompile 'org.testng:testng:+'
+}
